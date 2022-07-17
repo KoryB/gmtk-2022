@@ -1,0 +1,59 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://dice/DiceCop.cs" type="Script" id=1]
+[ext_resource path="res://dice/ParabolaDrawer.cs" type="Script" id=2]
+[ext_resource path="res://dice/five.png" type="Texture" id=3]
+[ext_resource path="res://dice/zero.png" type="Texture" id=4]
+[ext_resource path="res://dice/three.png" type="Texture" id=5]
+[ext_resource path="res://dice/four.png" type="Texture" id=6]
+[ext_resource path="res://dice/one.png" type="Texture" id=7]
+[ext_resource path="res://dice/two.png" type="Texture" id=8]
+[ext_resource path="res://dice/six.png" type="Texture" id=9]
+
+[sub_resource type="PhysicsMaterial" id=6]
+bounce = 0.3
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="DiceCop" type="RigidBody2D"]
+position = Vector2( 104, 292 )
+collision_mask = 3
+physics_material_override = SubResource( 6 )
+script = ExtResource( 1 )
+_slowdownModulo = 3
+JumpStrength = 200.0
+JumpRotation = 800.0
+JumpAngleBounds = Vector2( 0, 1.571 )
+JumpAngleChangeDuration = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="ParabolaDrawer" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+_duration = 3.0
+_color = Color( 0.0666667, 0.607843, 0.694118, 1 )
+
+[node name="LoadedDiceDetector" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LoadedDiceDetector"]
+shape = SubResource( 5 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+self_modulate = Color( 0.482353, 0.580392, 0.529412, 1 )
+frames = SubResource( 7 )

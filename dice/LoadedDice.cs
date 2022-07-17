@@ -1,13 +1,16 @@
 using Godot;
 using System;
 
-public class LoadedDice : RigidBody2D
+public class LoadedDice : Dice
 {
-    // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
+    public const string Group = "LoadedDice";
 
-    // Called when the node enters the scene tree for the first time.
+    public bool IsDead = false;
+
+
+    [Export]
+    public int Value = 2;
+
     public override void _Ready()
     {
         GetNode<Timer>("DeathTimer").Connect("timeout", this, nameof(ActuallyDie));
@@ -16,10 +19,17 @@ public class LoadedDice : RigidBody2D
     public void Kill()
     {
         GetNode<Timer>("DeathTimer").Start();
+        IsDead = true;
     }
 
     private void ActuallyDie()
     {
         this.QueueFree();
+    }
+
+    protected override void SyncFrame()
+    {
+        _frame = Value;
+        base.SyncFrame();
     }
 }

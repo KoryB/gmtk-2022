@@ -1,0 +1,207 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://dice/DiceCop.tscn" type="PackedScene" id=1]
+[ext_resource path="res://dice/LoadedDice.tscn" type="PackedScene" id=2]
+[ext_resource path="res://walls/Wall.tscn" type="PackedScene" id=3]
+
+[sub_resource type="PhysicsMaterial" id=1]
+rough = true
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="PhysicsMaterial" id=2]
+rough = true
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="PhysicsMaterial" id=3]
+rough = true
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="PhysicsMaterial" id=4]
+rough = true
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="PhysicsMaterial" id=5]
+rough = true
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="PhysicsMaterial" id=6]
+rough = true
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="PhysicsMaterial" id=7]
+rough = true
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="PhysicsMaterial" id=8]
+rough = true
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="PhysicsMaterial" id=9]
+rough = true
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="PhysicsMaterial" id=10]
+rough = true
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="PhysicsMaterial" id=11]
+rough = true
+bounce = 1.0
+absorbent = true
+
+[sub_resource type="PhysicsMaterial" id=12]
+rough = true
+bounce = 1.0
+absorbent = true
+
+[node name="Level" type="Node2D"]
+
+[node name="DiceCop" parent="." instance=ExtResource( 1 )]
+position = Vector2( 16, 272 )
+
+[node name="LoadedDice" parent="." instance=ExtResource( 2 )]
+position = Vector2( 880, 464 )
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Wall" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 16, 496 )
+
+[node name="Wall2" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 48, 496 )
+
+[node name="Wall3" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 80, 496 )
+
+[node name="Wall4" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 112, 496 )
+
+[node name="Wall5" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 144, 496 )
+
+[node name="Wall6" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 176, 496 )
+
+[node name="Wall7" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 208, 496 )
+
+[node name="Wall8" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 240, 496 )
+
+[node name="Wall9" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 272, 496 )
+
+[node name="Wall10" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 304, 496 )
+
+[node name="Wall11" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 336, 496 )
+
+[node name="Wall12" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 368, 496 )
+
+[node name="Wall25" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 288, 272 )
+physics_material_override = SubResource( 1 )
+IsSticky = true
+
+[node name="Wall26" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 320, 272 )
+physics_material_override = SubResource( 2 )
+IsSticky = true
+
+[node name="Wall27" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 352, 272 )
+physics_material_override = SubResource( 3 )
+IsSticky = true
+
+[node name="Wall28" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 384, 272 )
+physics_material_override = SubResource( 4 )
+IsSticky = true
+
+[node name="Wall29" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 416, 272 )
+physics_material_override = SubResource( 5 )
+IsSticky = true
+
+[node name="Wall30" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 448, 272 )
+physics_material_override = SubResource( 6 )
+IsSticky = true
+
+[node name="Wall31" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 480, 272 )
+physics_material_override = SubResource( 7 )
+IsSticky = true
+
+[node name="Wall32" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 512, 272 )
+physics_material_override = SubResource( 8 )
+IsSticky = true
+
+[node name="Wall33" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 544, 272 )
+physics_material_override = SubResource( 9 )
+IsSticky = true
+
+[node name="Wall34" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 576, 272 )
+physics_material_override = SubResource( 10 )
+IsSticky = true
+
+[node name="Wall35" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 608, 272 )
+physics_material_override = SubResource( 11 )
+IsSticky = true
+
+[node name="Wall36" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 640, 272 )
+physics_material_override = SubResource( 12 )
+IsSticky = true
+
+[node name="Wall13" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 529, 494 )
+
+[node name="Wall14" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 561, 494 )
+
+[node name="Wall15" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 593, 494 )
+
+[node name="Wall16" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 625, 494 )
+
+[node name="Wall17" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 657, 494 )
+
+[node name="Wall18" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 689, 494 )
+
+[node name="Wall19" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 721, 494 )
+
+[node name="Wall20" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 753, 494 )
+
+[node name="Wall21" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 785, 494 )
+
+[node name="Wall22" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 817, 494 )
+
+[node name="Wall23" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 849, 494 )
+
+[node name="Wall24" parent="Walls" instance=ExtResource( 3 )]
+position = Vector2( 881, 494 )

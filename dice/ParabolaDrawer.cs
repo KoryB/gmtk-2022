@@ -29,7 +29,7 @@ public class ParabolaDrawer : Control
         _diceCop = GetParent<DiceCop>();
     }
 
-    public override void _Process(float delta)
+    public override void _PhysicsProcess(float delta)
     {
         Update();
     }

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://walls/angle_wall.png" type="Texture" id=1]
+[ext_resource path="res://walls/Wall.cs" type="Script" id=2]
+
+[node name="AngleWall" type="RigidBody2D"]
+mode = 1
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -16, 16, 16, 16, 16, -16 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
